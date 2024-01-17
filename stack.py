@@ -22,6 +22,12 @@ class Stack:
 
 if __name__ == '__main__':
     stack = Stack()
-    for i in range(0, 21):
-        stack.pushtostack(2)
-    print(stack.length())
+    while True:
+        url = input("Enter a URL (or 'exit' to quit): ")
+        if url == 'exit':
+            break
+        stack.pushtostack(url)
+    
+    print("Browser History:")
+    while not stack.is_empty():
+        print(stack.popfromstack())

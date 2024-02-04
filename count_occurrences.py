@@ -5,6 +5,8 @@ def count(arr):
     for el in arr:
         while arr[0] == arr[1]:
             count.append(arr[el])
+        if arr[el] == len(arr-1):
+            break
     return count
 
 
